@@ -1,6 +1,6 @@
-# How-To: Clone & Run Project
+## How-To: Clone & Run Project
 
-## Windows
+### Windows
 
 ```powershell
 # create virtual environment
@@ -12,13 +12,37 @@ py -m venv .venv
 # install required packages
 pip3 install -r .\requirements.txt
 
+# initialize database 
+python manage.py migrate
+
 # start server
 python manage.py runserver
 
 ```
 
-## Mac
+### Mac
 
 ```bash
+# create virtual environment
+$ python3 -m venv .venv
 
+# activate virtual environment
+$ source .venv/bin/activate
+
+# install required packages
+$ pip3 install -r ./requirements.txt
+
+# initialize database 
+$ python manage.py migrate
+
+# start server
+$ python manage.py runserver
+
+```
+
+## create superuser
+
+### Mac & Windows
+```bash
+$ python manage.py createsuperuser
 ```
