@@ -7,7 +7,8 @@
 </head>
 <body>
     <header>
-        {% if user.is_authenticated %}
+        {% block header %}
+            {% if user.is_authenticated %}
 
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
@@ -23,6 +24,7 @@
         <a href="{% url 'password_reset' %}">Password Reset</a> |
         <a href="{% url 'signup' %}">Sign Up</a>
         {% endif %}
+        {% endblock header %}
     </header>
 
 
