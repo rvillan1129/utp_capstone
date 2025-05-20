@@ -39,6 +39,12 @@ $ python manage.py migrate
 $ python manage.py runserver
 
 ```
+## Environment Variables
+
+### Mac
+```bash
+# project searches for project-level .env file
+```
 
 ## create superuser
 
